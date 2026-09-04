@@ -1,0 +1,23 @@
+# Dependências
+node_modules/
+
+# Arquivos de ambiente / credenciais
+.env
+.env.local
+*.key
+*.pem
+
+# Logs
+*.log
+
+# Sistema operacional
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+
+# Imagens originais pesadas (backup)
+assets/images/**/*-original.*

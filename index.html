@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empadas do Gab | Empadas Artesanais</title>
+  <meta name="description" content="Empadas do Gab — empadas artesanais, recheadas de sabor. Confira o cardápio, escolha seu sabor favorito e peça pelo WhatsApp.">
+  <meta name="theme-color" content="#4A2C20">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Empadas do Gab | Empadas Artesanais">
+  <meta property="og:description" content="Empadas artesanais, recheadas de sabor. Peça pelo WhatsApp.">
+  <meta property="og:image" content="assets/images/hero/empadas-principal.jpg">
+  <meta property="og:locale" content="pt_BR">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <header>
+    <div class="container header-content">
+      <a href="#hero" class="logo" aria-label="Empadas do Gab - Início">
+        <i data-lucide="pie-chart"></i>
+        <span>EMPADAS DO GAB</span>
+      </a>
+
+      <nav class="nav-menu" aria-label="Navegação principal">
+        <ul>
+          <li><a href="#cardapio">Cardápio</a></li>
+          <li><a href="#sabores">Sabores</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <a href="#" id="btn-header-pedido" class="btn-header">
+        <i data-lucide="message-circle"></i>
+        <span>Fazer Pedido</span>
+      </a>
+
+      <button class="mobile-menu-btn" aria-label="Abrir Menu" aria-expanded="false">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <div class="hero-badges">
+            <div class="badge"><i data-lucide="heart"></i> Feitas com carinho</div>
+            <div class="badge"><i data-lucide="leaf"></i> Ingredientes selecionados</div>
+          </div>
+          <h1>Empadas do Gab</h1>
+          <h2>Empadas artesanais, recheadas de <span>sabor.</span></h2>
+          <p>Escolha seu sabor favorito e faça seu pedido.</p>
+
+          <div class="hero-actions">
+            <a href="#cardapio" class="btn-secondary"><i data-lucide="book-open"></i> Ver Cardápio</a>
+            <a href="#" id="btn-hero-whatsapp" class="btn-whatsapp"><i data-lucide="message-circle"></i> Pedir pelo WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="hero-card-preview">
+          <img src="assets/images/hero/empadas-principal.jpg"
+               alt="Empadas artesanais fresquinhas das Empadas do Gab"
+               id="hero-img">
+        </div>
+      </div>
+    </section>
+
+    <!-- DESTAQUES -->
+    <section class="services-pillars">
+      <div class="container">
+        <div class="section-title">
+          <h2>Por que escolher a Empadas do Gab?</h2>
+          <p>Um pequeno cuidado em cada detalhe</p>
+        </div>
+
+        <div class="pillars-grid">
+          <div class="pillar-card">
+            <div class="pillar-icon"><i data-lucide="pie-chart"></i></div>
+            <h3>Empadas Artesanais</h3>
+            <p>Feitas de forma artesanal, com massa e recheios preparados com atenção e capricho.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon"><i data-lucide="heart"></i></div>
+            <h3>Feitas com Carinho</h3>
+            <p>Cada empada é preparada pensando em proporcionar uma experiência saborosa.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon"><i data-lucide="clipboard-list"></i></div>
+            <h3>Encomendas</h3>
+            <p>Aceitamos encomendas para festas e eventos. Consulte disponibilidade.</p>
+          </div>
+          <div class="pillar-card">
+            <div class="pillar-icon"><i data-lucide="smartphone"></i></div>
+            <h3>Pedido pelo WhatsApp</h3>
+            <p>Faça seu pedido de forma rápida e prática, direto pelo WhatsApp.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CARDÁPIO -->
+    <section id="cardapio" class="cardapio-section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Cardápio</h2>
+          <p>Confira nossos sabores</p>
+        </div>
+
+        <div class="filter-bar" role="group" aria-label="Filtrar por categoria">
+          <!-- filtros inseridos dinamicamente pelo JS -->
+        </div>
+
+        <div id="cardapio-grid" class="cardapio-grid">
+          <!-- cards gerados dinamicamente pelo JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SABORES / DIFERENCIAIS -->
+    <section id="sabores" class="tech-services">
+      <div class="container">
+        <div class="section-title">
+          <h2>Sabores para todos os gostos</h2>
+          <p>Uma variedade de empadas para cada momento</p>
+        </div>
+
+        <div class="services-list-grid">
+          <div class="service-item"><i data-lucide="check-circle-2"></i> <span>Sabores tradicionais e especiais</span></div>
+          <div class="service-item"><i data-lucide="check-circle-2"></i> <span>Massa leve e saborosa</span></div>
+          <div class="service-item"><i data-lucide="check-circle-2"></i> <span>Recheios cremosos e temperados</span></div>
+          <div class="service-item"><i data-lucide="check-circle-2"></i> <span>Novidades que chegam sempre</span></div>
+          <div class="service-item"><i data-lucide="check-circle-2"></i> <span>Perfeitas para qualquer hora do dia</span></div>
+          <div class="service-item"><i data-lucide="check-circle-2"></i> <span>Pedido rápido e prático</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERIA -->
+    <section id="galeria" class="galeria-section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Galeria</h2>
+          <p>Um pouco do nosso sabor em imagens</p>
+        </div>
+
+        <div id="galeria-grid" class="galeria-grid">
+          <!-- imagens geradas dinamicamente pelo JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="sobre-section">
+      <div class="container">
+        <div class="sobre-grid">
+          <div class="sobre-img">
+            <img src="assets/images/produtos/empada-frango.jpg"
+                 alt="Empada artesanal das Empadas do Gab"
+                 loading="lazy">
+          </div>
+          <div class="sobre-text">
+            <h2>Sobre as Empadas do Gab</h2>
+            <p>[INSERIR AQUI A HISTÓRIA DA EMPADAS DO GAB]</p>
+            <p>Empadas artesanais preparadas com carinho, para proporcionar sabor e qualidade em cada mordida.</p>
+
+            <div class="diferenciais">
+              <div class="diferencial">
+                <i data-lucide="sparkles"></i>
+                <div><strong>Sabor</strong><p>Experiência saborosa em cada empada.</p></div>
+              </div>
+              <div class="diferencial">
+                <i data-lucide="award"></i>
+                <div><strong>Qualidade</strong><p>Cuidado na preparação e apresentação.</p></div>
+              </div>
+              <div class="diferencial">
+                <i data-lucide="layers"></i>
+                <div><strong>Variedade</strong><p>Diversos sabores para diferentes gostos.</p></div>
+              </div>
+              <div class="diferencial">
+                <i data-lucide="zap"></i>
+                <div><strong>Praticidade</strong><p>Peça rapidamente pelo WhatsApp.</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSTAGRAM -->
+    <section class="instagram-section">
+      <div class="container">
+        <div class="section-title">
+          <h2>Siga as Empadas do Gab</h2>
+          <p>Acompanhe novidades e sabores no Instagram</p>
+        </div>
+        <a href="#" id="btn-instagram" target="_blank" rel="noopener" class="btn-instagram">
+          <svg class="icon-instagram" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          Conheça nosso Instagram
+        </a>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>Deu água na boca?</h2>
+        <p>Escolha seus sabores favoritos e faça seu pedido.</p>
+        <a href="#" id="btn-cta-final" class="btn-whatsapp btn-large">
+          <i data-lucide="message-circle"></i> Pedir pelo WhatsApp
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer id="contato">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a href="#hero" class="logo">
+          <i data-lucide="pie-chart"></i>
+          <span>EMPADAS DO GAB</span>
+        </a>
+        <p>Empadas artesanais, recheadas de sabor. Feitas com carinho para qualquer hora do dia.</p>
+      </div>
+
+      <div class="footer-links">
+        <h3>Navegação</h3>
+        <ul>
+          <li><a href="#cardapio">Cardápio</a></li>
+          <li><a href="#galeria">Galeria</a></li>
+          <li><a href="#sobre">Sobre</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contato">
+        <h3>Contato</h3>
+        <ul>
+          <li><a href="#" id="footer-whatsapp"><i data-lucide="message-circle"></i> <span>WhatsApp</span></a></li>
+          <li><a href="#" id="footer-instagram"><svg class="icon-instagram" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg> <span>Instagram</span></a></li>
+          <li><i data-lucide="clock"></i> <span id="footer-horario">Horário de atendimento</span></li>
+          <li><i data-lucide="map-pin"></i> <span id="footer-cidade">Cidade / Região</span></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© <span id="ano"></span> Empadas do Gab. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BOTÃO FLUTUANTE WHATSAPP -->
+  <a href="#" id="whatsapp-float" class="whatsapp-float" aria-label="Fazer pedido pelo WhatsApp">
+    <i data-lucide="message-circle"></i>
+  </a>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Visualização ampliada">
+    <button class="lightbox-close" aria-label="Fechar"><i data-lucide="x"></i></button>
+    <img id="lightbox-img" src="" alt="Imagem ampliada">
+  </div>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
