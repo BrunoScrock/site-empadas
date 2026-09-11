@@ -1952,15 +1952,9 @@ body.no-scroll {
 
   .hero-image-wrapper {
     order: -1;
-    width: 100vw;
+    width: auto;
     max-width: none;
-    margin-left: calc(50% - 50vw);
-  }
-
-  .hero-image-container {
-    border-radius: 0;
-    border-right: none;
-    border-left: none;
+    margin: 0 3.5vw;
   }
 
   .hero-text h1 {
