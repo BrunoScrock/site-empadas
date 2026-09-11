@@ -1,0 +1,33 @@
+# Empadas do Gab
+
+Empadas artesanais, recheadas de sabor. Site institucional e vitrine digital da Empadas do Gab, com cardápio, sabores e valores, galeria de fotos e pedidos pelo WhatsApp.
+
+## Tecnologia
+
+- Site 100% estático (HTML5 + CSS3 + JavaScript puro)
+- Ícones: Lucide Icons (CDN)
+- Tipografia: Inter (Google Fonts)
+
+## Páginas
+
+- https://brunoscrock.github.io/site-empadas/ — Página única: Início, Diferenciais, Cardápio, Sabores e Valores, Sobre, Galeria e Contato
+
+## Seções do site
+
+- Header fixo com menu e botão "Fazer Pedido"
+- Hero com imagem da marca e chamadas para o WhatsApp
+- Diferenciais (4 pilares)
+- Cardápio com filtros por categoria (Tradicionais, Especiais, Doces)
+- Sabores e Valores (tabela de preços)
+- Sobre a marca
+- Galeria (coverflow 3D + lightbox)
+- Contato com horários de atendimento
+- Botão flutuante do WhatsApp
+
+## Como fazer um pedido
+
+Todos os botões "Pedir" abrem o WhatsApp com uma mensagem pronta:
+
+- https://api.whatsapp.com/send?phone=55XXXXXXXXXXX&text=...
+
+O número oficial deve ser preenchido em `assets/js/script.js` → `EMPADAS_CONFIG.whatsapp`.
