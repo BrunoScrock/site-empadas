@@ -483,8 +483,9 @@ nav a:hover::after {
   box-shadow: 0 10px 30px rgba(90, 55, 25, 0.18);
 }
 
-.hero-image-badge i {
-  color: var(--secondary);
+.hero-image-badge i,
+.hero-image-badge svg {
+  color: var(--orange);
   width: 28px;
   height: 28px;
 }
