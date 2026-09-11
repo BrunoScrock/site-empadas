@@ -576,6 +576,11 @@ nav a:hover::after {
   margin-bottom: 20px;
 }
 
+.pillar-icon--orange {
+  background: linear-gradient(135deg, #fff7ed, #ffedd5);
+  color: var(--orange);
+}
+
 .pillar-card h3 {
   font-size: 1.25rem;
   font-weight: 700;
