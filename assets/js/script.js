@@ -744,7 +744,7 @@ function setupLogoFallback() {
         <rect width="64" height="64" rx="14" fill="#ffffff"/>
         <circle cx="32" cy="28" r="14" fill="#f59e0b"/>
         <path d="M32 18 a10 10 0 0 1 0 20 z" fill="#c2410c"/>
-        <text x="32" y="52" font-family="Arial" font-size="9" font-weight="800" fill="#111827" text-anchor="middle">EMPADAS</text>
+        <text x="32" y="52" font-family="Arial" font-size="9" font-weight="800" fill="#111827" text-anchor="middle">Empadas</text>
       </svg>`
     );
 

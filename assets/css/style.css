@@ -3,19 +3,21 @@
    ========================================================================== */
 
 :root {
-  --primary: #111827;        /* Grafite escuro */
-  --primary-light: #1f2937;  /* Grafite claro */
-  --secondary: #c2410c;      /* Terracota Empadas do Gab */
+  --primary: #3a2c21;        /* Café escuro (texto e títulos) */
+  --primary-light: #594233;
+  --secondary: #c2410c;      /* Terracota marca (empada assada) */
   --secondary-hover: #9a3412;
-  --accent: #f59e0b;         /* Âmbar dourado de destaque */
+  --accent: #b45309;         /* Âmbar/mel escuro para legibilidade */
+  --accent-soft: #f59e0b;    /* Âmbar claro para destaques */
   --whatsapp: #22c55e;
   --whatsapp-hover: #16a34a;
-  --bg-light: #f9fafb;
-  --text-dark: #1e293b;
-  --text-muted: #64748b;
-  --white: #ffffff;
-  --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.06);
-  --shadow-hover: 0 20px 35px -8px rgba(0, 0, 0, 0.2);
+  --cream: #fffaf2;          /* Creme suave (fundo) */
+  --bg-light: #fbefdf;       /* Creme quente (seções alternadas) */
+  --text-dark: #3a2c21;
+  --text-muted: #7d6957;
+  --white: #fffdf9;
+  --shadow: 0 10px 25px -5px rgba(90, 55, 25, 0.12), 0 8px 10px -6px rgba(90, 55, 25, 0.07);
+  --shadow-hover: 0 20px 35px -8px rgba(90, 55, 25, 0.22);
   --radius: 14px;
 }
 
@@ -28,7 +30,7 @@
 }
 
 body {
-  background: linear-gradient(to bottom, #0d1117 0%, #0d1117 80px, var(--white) 80px, var(--white) 100%);
+  background: linear-gradient(to bottom, #f5e3c8 0%, #f5e3c8 80px, var(--cream) 80px, var(--cream) 100%);
   color: var(--text-dark);
   line-height: 1.6;
   padding-top: 80px;
@@ -106,22 +108,22 @@ section {
    ========================================================================== */
 
 header {
-  background: linear-gradient(to bottom, rgba(17, 24, 39, 0.97) 55%, rgba(17, 24, 39, 0.55) 100%);
+  background: linear-gradient(to bottom, rgba(250, 243, 231, 0.96) 55%, rgba(250, 243, 231, 0.78) 100%);
   backdrop-filter: blur(10px);
-  color: var(--white);
+  color: var(--primary);
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 80px;
   z-index: 1000;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 20px rgba(90, 55, 25, 0.12);
   transition: height 0.3s ease, box-shadow 0.3s ease;
 }
 
 header.scrolled {
   height: 68px;
-  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 6px 25px rgba(90, 55, 25, 0.18);
 }
 
 .header-content {
@@ -157,15 +159,14 @@ header.scrolled {
 .logo-name {
   font-weight: 900;
   font-size: 1.35rem;
-  letter-spacing: 1px;
-  color: var(--white);
+  letter-spacing: 0.5px;
+  color: var(--primary);
 }
 
 .logo-sub {
-  font-size: 0.7rem;
+  font-size: 0.72rem;
   color: var(--accent);
-  font-weight: 600;
-  text-transform: uppercase;
+  font-weight: 700;
   letter-spacing: 0.5px;
 }
 
@@ -227,7 +228,7 @@ nav a:hover::after {
   display: none;
   background: none;
   border: none;
-  color: var(--white);
+  color: var(--primary);
   cursor: pointer;
   padding: 8px;
 }
@@ -237,8 +238,8 @@ nav a:hover::after {
    ========================================================================== */
 
 .hero {
-  background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #1f2937 100%);
-  color: var(--white);
+  background: linear-gradient(135deg, #fdf3e0 0%, #fdebd3 50%, #fbe3c7 100%);
+  color: var(--primary);
   padding: 70px 0;
   position: relative;
   overflow: hidden;
@@ -249,7 +250,7 @@ nav a:hover::after {
   inset: 0;
   background:
     radial-gradient(circle at 20% 50%, rgba(194, 65, 12, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 90% 20%, rgba(245, 158, 11, 0.06) 0%, transparent 40%);
+    radial-gradient(circle at 90% 20%, rgba(245, 158, 11, 0.1) 0%, transparent 40%);
   pointer-events: none;
 }
 
@@ -275,26 +276,26 @@ nav a:hover::after {
   mask-image: linear-gradient(to bottom, transparent 0%, #000 20%, #000 80%, transparent 100%);
 }
 
-/* Camada de fundo: fagulhas maiores e lentas */
+/* Camada de fundo: pontinhos dourados (migalhas de confeitaria) */
 .sparks::before {
   background-image:
-    radial-gradient(circle at 30px 40px, rgba(251, 191, 36, 0.30) 2px, transparent 3px),
-    radial-gradient(circle at 160px 120px, rgba(245, 158, 11, 0.22) 2px, transparent 3px),
-    radial-gradient(circle at 90px 200px, rgba(255, 255, 255, 0.14) 1px, transparent 2px),
-    radial-gradient(circle at 240px 60px, rgba(251, 191, 36, 0.18) 2px, transparent 3px),
-    radial-gradient(circle at 200px 260px, rgba(245, 158, 11, 0.16) 2px, transparent 3px);
+    radial-gradient(circle at 30px 40px, rgba(245, 158, 11, 0.22) 2px, transparent 3px),
+    radial-gradient(circle at 160px 120px, rgba(194, 65, 12, 0.16) 2px, transparent 3px),
+    radial-gradient(circle at 90px 200px, rgba(201, 156, 61, 0.18) 1px, transparent 2px),
+    radial-gradient(circle at 240px 60px, rgba(245, 158, 11, 0.15) 2px, transparent 3px),
+    radial-gradient(circle at 200px 260px, rgba(194, 65, 12, 0.12) 2px, transparent 3px);
   background-size: 280px 280px;
   animation: sparksUp 55s linear infinite;
 }
 
-/* Camada próxima: fagulhas menores e rápidas (profundidade) */
+/* Camada próxima: tãpios menores e rápidos (profundidade) */
 .sparks::after {
   background-image:
-    radial-gradient(circle at 100px 80px, rgba(253, 224, 71, 0.45) 1px, transparent 2px),
-    radial-gradient(circle at 260px 200px, rgba(255, 255, 255, 0.25) 1px, transparent 2px),
-    radial-gradient(circle at 40px 240px, rgba(251, 191, 36, 0.35) 1px, transparent 2px),
-    radial-gradient(circle at 300px 40px, rgba(245, 158, 11, 0.30) 1px, transparent 2px),
-    radial-gradient(circle at 180px 300px, rgba(253, 224, 71, 0.30) 1px, transparent 2px);
+    radial-gradient(circle at 100px 80px, rgba(234, 179, 8, 0.32) 1px, transparent 2px),
+    radial-gradient(circle at 260px 200px, rgba(180, 83, 9, 0.18) 1px, transparent 2px),
+    radial-gradient(circle at 40px 240px, rgba(245, 158, 11, 0.24) 1px, transparent 2px),
+    radial-gradient(circle at 300px 40px, rgba(194, 65, 12, 0.2) 1px, transparent 2px),
+    radial-gradient(circle at 180px 300px, rgba(234, 179, 8, 0.22) 1px, transparent 2px);
   background-size: 340px 340px;
   animation: sparksUpLarge 28s linear infinite;
 }
@@ -341,7 +342,7 @@ nav a:hover::after {
 
 .hero-text p {
   font-size: 1.1rem;
-  color: #9ca3af;
+  color: var(--text-muted);
   margin-bottom: 30px;
   max-width: 540px;
 }
@@ -357,18 +358,18 @@ nav a:hover::after {
   display: flex;
   align-items: center;
   gap: 8px;
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 253, 249, 0.75);
   padding: 8px 14px;
   border-radius: 8px;
-  border: 1px solid rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(194, 65, 12, 0.16);
   font-size: 0.85rem;
   font-weight: 500;
-  color: #e5e7eb;
+  color: var(--primary);
   backdrop-filter: blur(4px);
 }
 
 .badge i {
-  color: var(--whatsapp);
+  color: var(--secondary);
   width: 16px;
   height: 16px;
 }
@@ -402,7 +403,7 @@ nav a:hover::after {
 
 .btn-cta-secondary {
   background-color: transparent;
-  color: var(--white);
+  color: var(--primary);
   padding: 16px 30px;
   border-radius: 10px;
   font-weight: 600;
@@ -410,13 +411,14 @@ nav a:hover::after {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  border: 2px solid var(--primary);
   transition: all 0.3s;
 }
 
 .btn-cta-secondary:hover {
-  border-color: var(--white);
-  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--secondary);
+  color: var(--secondary);
+  background: rgba(194, 65, 12, 0.06);
   transform: translateY(-3px);
 }
 
@@ -428,8 +430,8 @@ nav a:hover::after {
   position: relative;
   border-radius: var(--radius);
   overflow: hidden;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 60px rgba(90, 55, 25, 0.25);
+  border: 1px solid rgba(194, 65, 12, 0.15);
 }
 
 .hero-image {
@@ -448,19 +450,20 @@ nav a:hover::after {
   position: absolute;
   bottom: 20px;
   left: 20px;
-  background: rgba(17, 24, 39, 0.9);
+  background: rgba(255, 253, 249, 0.94);
   backdrop-filter: blur(8px);
   padding: 14px 18px;
   border-radius: 12px;
   display: flex;
   align-items: center;
   gap: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(194, 65, 12, 0.2);
   animation: floatBadge 4s ease-in-out infinite;
+  box-shadow: 0 10px 30px rgba(90, 55, 25, 0.18);
 }
 
 .hero-image-badge i {
-  color: var(--whatsapp);
+  color: var(--secondary);
   width: 28px;
   height: 28px;
 }
@@ -468,12 +471,12 @@ nav a:hover::after {
 .hero-image-badge strong {
   display: block;
   font-size: 0.9rem;
-  color: var(--white);
+  color: var(--primary);
 }
 
 .hero-image-badge span {
   font-size: 0.75rem;
-  color: #9ca3af;
+  color: var(--text-muted);
 }
 
 /* ==========================================================================
@@ -650,7 +653,6 @@ nav a:hover::after {
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.06em;
-  text-transform: uppercase;
   padding: 5px 12px;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.15);
@@ -735,7 +737,7 @@ nav a:hover::after {
    ========================================================================== */
 
 .section-sabores {
-  background: linear-gradient(160deg, #111827 0%, #1f2937 100%);
+  background: linear-gradient(160deg, #fdf1dd 0%, #fae6c8 100%);
   position: relative;
   overflow: hidden;
 }
@@ -746,11 +748,11 @@ nav a:hover::after {
 }
 
 .section-sabores .section-title h2 {
-  color: var(--white);
+  color: var(--primary);
 }
 
 .section-sabores .section-title p {
-  color: #9ca3af;
+  color: var(--text-muted);
 }
 
 .sabores-grid {
@@ -761,19 +763,21 @@ nav a:hover::after {
 }
 
 .sabor-card {
-  background: rgba(255, 255, 255, 0.04);
-  border-top: 4px solid var(--accent);
+  background: var(--white);
+  border-top: 4px solid var(--accent-soft);
   border-radius: var(--radius);
   padding: 28px;
-  backdrop-filter: blur(6px);
-  box-shadow: 0 8px 25px rgba(245, 158, 11, 0.25);
+  box-shadow: var(--shadow);
+  border-left: 1px solid rgba(194, 65, 12, 0.1);
+  border-right: 1px solid rgba(194, 65, 12, 0.1);
+  border-bottom: 1px solid rgba(194, 65, 12, 0.1);
   transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
 }
 
 .sabor-card:hover {
   transform: translateY(-4px);
-  border-color: var(--accent);
-  box-shadow: 0 12px 30px rgba(245, 158, 11, 0.35);
+  border-top-color: var(--secondary);
+  box-shadow: var(--shadow-hover);
 }
 
 .sabor-card-header {
@@ -782,7 +786,7 @@ nav a:hover::after {
   gap: 12px;
   margin-bottom: 22px;
   padding-bottom: 16px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(58, 44, 33, 0.1);
 }
 
 .sabor-card-header i,
@@ -791,7 +795,7 @@ nav a:hover::after {
 }
 
 .sabor-card-header h3 {
-  color: var(--white);
+  color: var(--primary);
   font-size: 1.2rem;
   font-weight: 700;
   letter-spacing: 0.5px;
@@ -806,8 +810,8 @@ nav a:hover::after {
   justify-content: space-between;
   align-items: center;
   padding: 11px 0;
-  border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
-  color: #d1d5db;
+  border-bottom: 1px dashed rgba(58, 44, 33, 0.15);
+  color: var(--text-dark);
   font-size: 0.92rem;
 }
 
@@ -816,21 +820,21 @@ nav a:hover::after {
 }
 
 .sabor-enfeite {
-  color: var(--accent);
-  font-weight: 600;
+  color: var(--secondary);
+  font-weight: 700;
   white-space: nowrap;
 }
 
 .sabor-vazio {
-  color: #9ca3af;
+  color: var(--text-muted);
   font-size: 0.92rem;
   font-style: italic;
   padding: 11px 0;
 }
 
 .prices-disclaimer {
-  background: rgba(245, 158, 11, 0.08);
-  border: 1px solid rgba(245, 158, 11, 0.25);
+  background: rgba(255, 253, 249, 0.8);
+  border: 1px solid rgba(194, 65, 12, 0.25);
   border-radius: 12px;
   padding: 20px 24px;
   display: flex;
@@ -843,18 +847,18 @@ nav a:hover::after {
 }
 
 .prices-disclaimer i {
-  color: var(--accent);
+  color: var(--secondary);
   flex-shrink: 0;
   margin-top: 3px;
 }
 
 .prices-disclaimer p {
-  color: #d1d5db;
+  color: var(--text-dark);
   font-size: 0.92rem;
 }
 
 .prices-disclaimer strong {
-  color: var(--white);
+  color: var(--primary);
 }
 
 .prices-cta {
@@ -1131,7 +1135,6 @@ nav a:hover::after {
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.06em;
-  text-transform: uppercase;
   color: #ffffff;
   background: rgba(17, 24, 39, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.15);
@@ -1147,8 +1150,7 @@ nav a:hover::after {
 .coverflow-title {
   font-size: 1.15rem;
   font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
   line-height: 1.15;
   color: #ffffff;
   margin: 0;
@@ -1172,7 +1174,6 @@ nav a:hover::after {
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.05em;
-  text-transform: uppercase;
   color: rgba(255, 255, 255, 0.9);
   background: rgba(245, 158, 11, 0.35);
   border: 1px solid rgba(255, 255, 255, 0.18);
@@ -1195,7 +1196,6 @@ nav a:hover::after {
   font-size: 0.78rem;
   font-weight: 700;
   letter-spacing: 0.06em;
-  text-transform: uppercase;
   border: none;
   cursor: pointer;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
@@ -1442,8 +1442,8 @@ nav a:hover::after {
    ========================================================================== */
 
 .footer {
-  background-color: #0d1117;
-  color: #9ca3af;
+  background-color: #33241b;
+  color: #cbb7a4;
   padding: 60px 0 0;
 }
 
@@ -1476,16 +1476,15 @@ nav a:hover::after {
   color: var(--white);
   font-size: 1.4rem;
   font-weight: 800;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   line-height: 1.2;
 }
 
 .footer-brand p {
-  font-size: 0.78rem;
-  color: var(--accent);
-  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: var(--accent-soft);
   letter-spacing: 0.5px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .footer-links {
@@ -1696,8 +1695,7 @@ body.no-scroll {
   margin: 0;
   font-size: 1.25rem;
   font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
   color: #ffffff;
 }
 
@@ -1805,12 +1803,12 @@ body.no-scroll {
     top: 100%;
     left: 0;
     width: 100%;
-    background: linear-gradient(to bottom, rgba(17, 24, 39, 0.96) 0%, rgba(17, 24, 39, 0.88) 100%);
+    background: linear-gradient(to bottom, rgba(250, 243, 231, 0.98) 0%, rgba(250, 243, 231, 0.94) 100%);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     padding: 10px 0 20px;
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 30px rgba(90, 55, 25, 0.25);
+    border-top: 1px solid rgba(194, 65, 12, 0.12);
     max-height: calc(100vh - 80px);
     overflow-y: auto;
   }
@@ -1829,7 +1827,8 @@ body.no-scroll {
     display: block;
     padding: 15px 24px;
     font-size: 1.05rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: var(--primary);
+    border-bottom: 1px solid rgba(58, 44, 33, 0.08);
   }
 
   .mobile-menu-btn {
@@ -1854,7 +1853,7 @@ body.no-scroll {
 @media (max-width: 768px) {
   body {
     padding-top: 70px;
-    background: linear-gradient(to bottom, #0d1117 0%, #0d1117 70px, var(--white) 70px, var(--white) 100%);
+    background: linear-gradient(to bottom, #f5e3c8 0%, #f5e3c8 70px, var(--cream) 70px, var(--cream) 100%);
   }
 
   header {
