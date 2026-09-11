@@ -697,7 +697,6 @@ function setupScrollAnimations() {
     ".sobre-features > *",
     ".coverflow",
     ".contato-grid > *",
-    ".contato-cards > *",
     ".footer-content > *"
   ];
 

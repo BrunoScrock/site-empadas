@@ -9,6 +9,8 @@
   --secondary-hover: #9a3412;
   --accent: #b45309;         /* Âmbar/mel escuro para legibilidade */
   --accent-soft: #f59e0b;    /* Âmbar claro para destaques */
+  --orange: #fb923c;         /* Laranja dos títulos */
+  --warm-dark: #2b1e15;      /* Café escuro (fundos de título) */
   --whatsapp: #22c55e;
   --whatsapp-hover: #16a34a;
   --cream: #fffaf2;          /* Creme suave (fundo) */
@@ -238,8 +240,8 @@ nav a:hover::after {
    ========================================================================== */
 
 .hero {
-  background: linear-gradient(135deg, #fdf3e0 0%, #fdebd3 50%, #fbe3c7 100%);
-  color: var(--primary);
+  background: linear-gradient(135deg, var(--warm-dark) 0%, #40291a 55%, #74391a 100%);
+  color: var(--white);
   padding: 70px 0;
   position: relative;
   overflow: hidden;
@@ -249,8 +251,8 @@ nav a:hover::after {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 20% 50%, rgba(194, 65, 12, 0.08) 0%, transparent 50%),
-    radial-gradient(circle at 90% 20%, rgba(245, 158, 11, 0.1) 0%, transparent 40%);
+    radial-gradient(circle at 20% 50%, rgba(235, 130, 54, 0.2) 0%, transparent 50%),
+    radial-gradient(circle at 90% 20%, rgba(251, 146, 60, 0.18) 0%, transparent 40%);
   pointer-events: none;
 }
 
@@ -300,6 +302,24 @@ nav a:hover::after {
   animation: sparksUpLarge 28s linear infinite;
 }
 
+.hero .sparks::before {
+  background-image:
+    radial-gradient(circle at 30px 40px, rgba(251, 191, 36, 0.38) 2px, transparent 3px),
+    radial-gradient(circle at 160px 120px, rgba(251, 146, 60, 0.3) 2px, transparent 3px),
+    radial-gradient(circle at 90px 200px, rgba(255, 237, 213, 0.22) 1px, transparent 2px),
+    radial-gradient(circle at 240px 60px, rgba(251, 146, 60, 0.28) 2px, transparent 3px),
+    radial-gradient(circle at 200px 260px, rgba(180, 83, 9, 0.32) 2px, transparent 3px);
+}
+
+.hero .sparks::after {
+  background-image:
+    radial-gradient(circle at 100px 80px, rgba(255, 197, 66, 0.42) 1px, transparent 2px),
+    radial-gradient(circle at 260px 200px, rgba(251, 146, 60, 0.32) 1px, transparent 2px),
+    radial-gradient(circle at 40px 240px, rgba(255, 237, 213, 0.36) 1px, transparent 2px),
+    radial-gradient(circle at 300px 40px, rgba(251, 146, 60, 0.34) 1px, transparent 2px),
+    radial-gradient(circle at 180px 300px, rgba(234, 179, 8, 0.42) 1px, transparent 2px);
+}
+
 @keyframes sparksUp {
   from {
     background-position: 0 0;
@@ -333,16 +353,17 @@ nav a:hover::after {
   line-height: 1.15;
   margin-bottom: 20px;
   letter-spacing: -0.5px;
+  color: var(--white);
 }
 
 .hero-text h1 span {
-  color: var(--secondary);
+  color: var(--orange);
   display: block;
 }
 
 .hero-text p {
   font-size: 1.1rem;
-  color: var(--text-muted);
+  color: #efe0cd;
   margin-bottom: 30px;
   max-width: 540px;
 }
@@ -403,7 +424,7 @@ nav a:hover::after {
 
 .btn-cta-secondary {
   background-color: transparent;
-  color: var(--primary);
+  color: var(--white);
   padding: 16px 30px;
   border-radius: 10px;
   font-weight: 600;
@@ -411,14 +432,14 @@ nav a:hover::after {
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  border: 2px solid var(--primary);
+  border: 2px solid rgba(255, 253, 249, 0.7);
   transition: all 0.3s;
 }
 
 .btn-cta-secondary:hover {
-  border-color: var(--secondary);
-  color: var(--secondary);
-  background: rgba(194, 65, 12, 0.06);
+  border-color: var(--orange);
+  color: var(--orange);
+  background: rgba(255, 253, 249, 0.08);
   transform: translateY(-3px);
 }
 
@@ -430,8 +451,8 @@ nav a:hover::after {
   position: relative;
   border-radius: var(--radius);
   overflow: hidden;
-  box-shadow: 0 25px 60px rgba(90, 55, 25, 0.25);
-  border: 1px solid rgba(194, 65, 12, 0.15);
+  box-shadow: 0 30px 70px rgba(20, 12, 6, 0.45);
+  border: 2px solid rgba(255, 253, 249, 0.22);
 }
 
 .hero-image {
@@ -485,23 +506,29 @@ nav a:hover::after {
 
 .section-title {
   text-align: center;
-  margin-bottom: 50px;
+  margin: 0 auto 50px;
+  max-width: 800px;
+  background: linear-gradient(135deg, var(--warm-dark) 0%, #4a3323 100%);
+  border-radius: 18px;
+  padding: 30px 26px;
+  border-top: 4px solid var(--orange);
+  box-shadow: 0 12px 30px rgba(58, 44, 33, 0.22);
 }
 
 .section-title h2 {
   font-size: 2.4rem;
   font-weight: 800;
-  color: var(--primary);
+  color: var(--white);
   margin-bottom: 12px;
   letter-spacing: -0.5px;
 }
 
 .section-title h2 span {
-  color: var(--secondary);
+  color: var(--orange);
 }
 
 .section-title p {
-  color: var(--text-muted);
+  color: #eadbc5;
   font-size: 1.1rem;
   max-width: 640px;
   margin: 0 auto;
@@ -747,13 +774,6 @@ nav a:hover::after {
   z-index: 1;
 }
 
-.section-sabores .section-title h2 {
-  color: var(--primary);
-}
-
-.section-sabores .section-title p {
-  color: var(--text-muted);
-}
 
 .sabores-grid {
   display: grid;
@@ -909,15 +929,21 @@ nav a:hover::after {
 }
 
 .sobre-text h2 {
+  display: inline-block;
   font-size: 2.2rem;
   font-weight: 800;
-  color: var(--primary);
+  color: var(--white);
   margin-bottom: 20px;
   letter-spacing: -0.5px;
+  background: linear-gradient(135deg, var(--warm-dark) 0%, #4a3323 100%);
+  border-radius: 14px;
+  padding: 10px 20px;
+  border-top: 4px solid var(--orange);
+  box-shadow: 0 10px 24px rgba(58, 44, 33, 0.22);
 }
 
 .sobre-text h2 span {
-  color: var(--secondary);
+  color: var(--orange);
 }
 
 .sobre-highlight {
@@ -1281,103 +1307,141 @@ nav a:hover::after {
    ========================================================================== */
 
 .section-contato {
-  background-color: var(--bg-light);
+  background-color: var(--white);
 }
 
 .contato-grid {
   display: grid;
-  grid-template-columns: 1fr 0.9fr;
-  gap: 40px;
-  align-items: start;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 34px;
+  align-items: stretch;
 }
 
-.contato-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 18px;
-}
-
-.contato-card {
-  background: var(--white);
-  border: 1px solid #e5e7eb;
-  border-radius: var(--radius);
-  padding: 28px 22px;
-  text-align: center;
-  box-shadow: var(--shadow);
-  transition: transform 0.3s, box-shadow 0.3s;
+.contato-cta {
+  background: linear-gradient(135deg, var(--warm-dark) 0%, #4a3323 60%, #74391a 100%);
+  border-radius: 22px;
+  padding: 42px 40px;
+  color: var(--white);
   display: flex;
   flex-direction: column;
-}
-
-.contato-card:hover {
-  transform: translateY(-5px);
-  box-shadow: var(--shadow-hover);
-}
-
-.contato-card-icon {
-  width: 56px;
-  height: 56px;
-  background: linear-gradient(135deg, #fef4ec, #fce8d8);
-  color: var(--secondary);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  margin: 0 auto 16px;
+  border-top: 4px solid var(--orange);
+  box-shadow: 0 22px 50px rgba(43, 30, 21, 0.35);
+  position: relative;
+  overflow: hidden;
 }
 
-.contato-card-icon svg {
-  width: 28px;
-  height: 28px;
+.contato-cta::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 26px 44px, rgba(251, 146, 60, 0.35) 2px, transparent 3px),
+    radial-gradient(circle at 150px 130px, rgba(255, 197, 66, 0.3) 2px, transparent 3px),
+    radial-gradient(circle at 290px 70px, rgba(255, 237, 213, 0.18) 1px, transparent 2px),
+    radial-gradient(circle at 120px 260px, rgba(194, 65, 12, 0.3) 2px, transparent 3px);
+  background-size: 300px 300px;
+  pointer-events: none;
 }
 
-.contato-card h3 {
-  font-size: 1.05rem;
-  font-weight: 700;
-  color: var(--primary);
-  margin-bottom: 6px;
+.contato-cta > * {
+  position: relative;
+  z-index: 1;
 }
 
-.contato-card p {
-  font-size: 0.85rem;
-  color: var(--text-muted);
-  margin-bottom: 16px;
-}
-
-.btn-contato {
-  background-color: var(--primary);
-  color: var(--white);
-  padding: 11px 20px;
-  border-radius: 8px;
-  font-weight: 600;
-  font-size: 0.88rem;
+.contato-cta-chip {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
   gap: 8px;
-  transition: all 0.3s;
-  margin-top: auto;
-  border: none;
-  cursor: pointer;
-  font-family: 'Inter', sans-serif;
+  background: rgba(255, 253, 249, 0.14);
+  border: 1px solid rgba(255, 253, 249, 0.25);
+  color: #fde7d3;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 7px 14px;
+  border-radius: 999px;
+  margin-bottom: 18px;
 }
 
-.btn-contato svg {
+.contato-cta-chip svg {
+  width: 15px;
+  height: 15px;
+}
+
+.contato-cta h3 {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 12px;
+  letter-spacing: -0.5px;
+}
+
+.contato-cta h3 span {
+  color: var(--orange);
+}
+
+.contato-cta p {
+  color: #eadbc5;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 26px;
+  max-width: 440px;
+}
+
+.btn-contato-cta {
+  background-color: var(--secondary);
+  color: var(--white);
+  padding: 15px 26px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.28);
+  transition: all 0.3s;
+  border: 2px solid transparent;
+  font-family: 'Inter', sans-serif;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-contato-cta:hover {
+  background-color: var(--secondary-hover);
+  transform: translateY(-3px);
+}
+
+.contato-cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #fde7d3;
+  font-weight: 600;
+  font-size: 0.92rem;
+  margin-top: 18px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contato-cta-link:hover {
+  color: var(--orange);
+}
+
+.contato-cta-link svg {
   width: 18px;
   height: 18px;
 }
 
-.btn-contato:hover {
-  background-color: var(--secondary);
-  transform: translateY(-2px);
-}
-
 .contato-info {
-  background: var(--white);
-  border: 1px solid #e5e7eb;
-  border-radius: var(--radius);
-  padding: 28px;
+  background: var(--bg-light);
+  border: 1px solid #e9ddc9;
+  border-radius: 22px;
+  padding: 32px 28px;
   box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .horarios-card h3 {
@@ -1837,10 +1901,6 @@ body.no-scroll {
     justify-content: center;
   }
 
-  .contato-cards {
-    grid-template-columns: 1fr;
-  }
-
   .section-title h2 {
     font-size: 1.9rem;
   }
@@ -1887,7 +1947,11 @@ body.no-scroll {
   }
 
   .hero {
-    padding: 50px 0;
+    padding: 36px 0 46px;
+  }
+
+  .hero-image-wrapper {
+    order: -1;
   }
 
   .hero-text h1 {
@@ -1903,10 +1967,6 @@ body.no-scroll {
   }
 
   .sabores-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .contato-cards {
     grid-template-columns: 1fr;
   }
 
